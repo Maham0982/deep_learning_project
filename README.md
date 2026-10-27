@@ -2,24 +2,6 @@
 
 Welcome to the **Image-Classifier-using-Flask** repository! This project is a web application built with Flask that classifies images into different categories based on a pre-trained machine learning model. The app provides a user-friendly interface for uploading images and receiving classification results.
 
-![Capture](https://github.com/user-attachments/assets/31ebacc6-f1a4-4b64-85a8-9a7ff8618b3d)
-
-## 📋 Contents
-
-- [Introduction](#introduction)
-- [Topics Covered](#topics-covered)
-- [Getting Started](#getting-started)
-- [Live Demo](#live-demo)
-- [Best Practices](#best-practices)
-- [FAQ](#faq)
-- [Troubleshooting](#troubleshooting)
-- [Contributing](#contributing)
-- [Additional Resources](#additional-resources)
-- [Challenges Faced](#challenges-faced)
-- [Lessons Learned](#lessons-learned)
-- [Why I Created This Repository](#why-i-created-this-repository)
-- [License](#license)
-- [Contact](#contact)
 
 ---
 
