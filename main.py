@@ -4,8 +4,9 @@ from flask import request
 import os
 import logging
 from werkzeug.utils import secure_filename
-from keras.preprocessing.image import load_img
-from keras.preprocessing.image import img_to_array
+from tensorflow.keras.preprocessing.image import load_img
+from tensorflow.keras.models import load_model
+from tensorflow.keras.preprocessing.image import img_to_array
 from keras.applications.resnet50 import ResNet50
 from keras.applications.resnet50 import preprocess_input
 from keras.applications.resnet50 import decode_predictions

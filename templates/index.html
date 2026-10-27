@@ -3,36 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Custom CSS -->
+    <title>Image Classifier</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <title>Image Classification</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #f5f5f5;
+            font-family: "Poppins", sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
 
+        .container {
+            background-color: #1e1e1e;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.1);
+            width: 380px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #00bcd4;
+            margin-bottom: 20px;
+        }
+
+        input[type="file"] {
+            background-color: #2b2b2b;
+            border: 1px solid #444;
+            padding: 10px;
+            border-radius: 8px;
+            width: 100%;
+            color: #ccc;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #00bcd4;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0097a7;
+        }
+
+        .result {
+            margin-top: 25px;
+            padding: 15px;
+            background-color: #2b2b2b;
+            border-radius: 10px;
+            color: #80cbc4;
+        }
+
+        h2 {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
 <body>
     <div class="container">
-        <header>
-            <h1>Image Classification</h1>
-        </header>
+        <h1>🧠 Image Classifier</h1>
 
-        <main>
-            <form action="/" method="post" enctype="multipart/form-data">
-                <div class="upload-section">
-                    <input type="file" name="imagefile" accept="image/*" required>
-                    <button type="submit">Classify Image</button>
-                </div>
-            </form>
+        <form action="/" method="post" enctype="multipart/form-data">
+            <input type="file" name="imagefile" accept="image/*" required>
+            <button type="submit">Classify</button>
+        </form>
 
-            {% if prediction %}
-            <div class="result">
-                <h2>Prediction:</h2>
-                <p>{{ prediction }}</p>
-            </div>
-            {% endif %}
-        </main>
-
-        <footer>
-            <p>&copy; 2024 Your Company. All rights reserved.</p>
-            <p>Developed by Md Emon Hasan. | <a href="https://github.com/Md-Emon-Hasan" target="_blank">GitHub Profile</a></p>
-        </footer>
+        {% if prediction %}
+        <div class="result">
+            <h2>Prediction Result:</h2>
+            <p>{{ prediction }}</p>
+        </div>
+        {% endif %}
     </div>
 </body>
 </html>
